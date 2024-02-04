@@ -56,7 +56,7 @@ class Authentication:
                                )
                tokenUrl='http://sstapi.pythonanywhere.com/accounts/api/client/returnToken/'+username
                getTokenData=apiSession.get(url=tokenUrl)
-               apiSession.post(url="http://localhost:3000/api/token",
+               apiSession.post(url="http://sst-weld.vercel.app/api/token",
                                data=getTokenData.json()
                                )
             
