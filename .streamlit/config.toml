@@ -1,7 +1,6 @@
 [theme]
-primaryColor="#000"
+primaryColor="#fff"
 base="dark"
-textColor="#262730"
 font="sans serif"
 [server]
 enableCORS = false
