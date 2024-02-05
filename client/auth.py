@@ -51,12 +51,10 @@ class Authentication:
 
         if userData['isLoggedIn']==True:
                apiSession = requests.session()
-               apiSession.post(url='http://sstapi.pythonanywhere.com/accounts/api/signup/',
+               getTokenData=apiSession.post(url='http://sstapi.pythonanywhere.com/accounts/api/signup/',
                                data=userData
                                )
-               tokenUrl='http://sstapi.pythonanywhere.com/accounts/api/client/returnToken/'+username
-               getTokenData=apiSession.get(url=tokenUrl)
-               apiSession.post(url="http://sst-weld.vercel.app/api/token",
+               apiSession.post(url="http://sstsite.vercel.app/api/token",
                                data=getTokenData.json()
                                )
             
