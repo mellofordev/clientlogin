@@ -47,6 +47,7 @@ class Authentication:
                     st.session_state.isLogged=True
                 except AttributeError:
                     userData['isLoggedIn']=False
+                    st.markdown(":red[Wrong credentials, check username/password!]")
                 
 
         if userData['isLoggedIn']==True:
