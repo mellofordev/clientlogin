@@ -25,6 +25,7 @@ class Authentication:
             username = st.text_input("Etlab username")
             password = st.text_input("Etlab password",type='password')
             submit = st.form_submit_button("Login")
+            st.markdown("There can be some :orange[waiting time] for login,:red[please dont change your etlab password once logged in]")
             if submit:
                 st.balloons()
                 payload['LoginForm[username]']=username
