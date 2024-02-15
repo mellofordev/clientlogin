@@ -53,10 +53,12 @@ class Authentication:
 
         if userData['isLoggedIn']==True:
                apiSession = requests.session()
-               getTokenData=apiSession.post(url='http://sstapi.pythonanywhere.com/accounts/api/signup/',
+               print(userData)
+               getTokenData=apiSession.post(url='http://localhost:8000/accounts/api/signup/',
                                data=userData
                                )
-               apiSession.post(url="http://sstsite.vercel.app/api/token",
+               print(getTokenData)
+               apiSession.post(url="https://sstsite-q79xurzz3-mellofordev.vercel.app/api/token",
                                data=getTokenData.json()
                                )
             
